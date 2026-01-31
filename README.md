@@ -56,13 +56,16 @@ gc_content <- function(sequence) {
 
 Proteins are linear chains of amino acids, each with a defined molecular weight. This task required mapping biological knowledge into a searchable structure while ensuring invalid inputs were rejected.
 
-###Steps taken:
+### Steps Taken
+
 1. Store amino acid weights as a named numeric vector.
 2. Convert input to uppercase.
-3. Split the protein sequence into amino acids.
+3. Split the protein sequence into individual amino acids.
 4. Validate that all characters are standard amino acids.
-5. Return 0 for invalid sequences.
-6. Sum weights and convert from Daltons to kiloDaltons.
+5. Return `0` for invalid sequences.
+6. Sum molecular weights and convert from Daltons (Da) to kiloDaltons (kDa).
+
+---
 
 ## Task 2: Protein Molecular Weight Calculator
 
@@ -86,24 +89,3 @@ protein_weight <- function(protein = "BUSAYO") {
   total_weight_kda <- total_weight_da / 1000
   return(total_weight_kda)
 }
-### output
-```r
-protein_weight("MAG")
-# [1] 0.31337
-
-protein_weight("BAG")
-# [1] 0
-
-protein_weight()
-# [1] 0
-
-### Key Skills Demonstrated
-1. Custom R function design
-2. Input validation and error handling
-3. Vectorized computation
-4. Application of biological domain knowledge
-5. Reproducible and readable code
-
-
-##Conclusion
-This project demonstrates how biological questions can be transformed into reliable computational solutions using R. By combining biological reasoning with defensive programming practices, the functions produce accurate and meaningful results suitable for bioinformatics workflows.
