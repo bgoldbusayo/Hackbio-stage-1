@@ -51,6 +51,9 @@ gc_content <- function(sequence) {
   gc_percent <- (gc_count / length(nucleotides)) * 100
   return(gc_percent)
 }
+{
+  ...
+}
 
 ## Using Task 2 to Explain Protein Molecular Weight Calculation
 
